@@ -1,5 +1,6 @@
 let quantidade = parseInt(prompt("Digite quantos eletrodomesticos voce quer ver o preco: "));
 let contador = 0;
+let taxa = parseFloat(prompt("Digite o valor da taxa por KWh R$ : "))
 while (quantidade > contador) {
   contador++;
   let kilowats, custo, kwhMES;
@@ -19,6 +20,7 @@ while (quantidade > contador) {
   }
   kwhMES = kilowats * horas * dias;
   custo = kwhMES * 0.9;
+  custo = kwhMES * taxa;
   alert(`O seu eletrodomestico e : ` +eletro +`\nO consumo mensal em Kw/h e : ` + kwhMES.toFixed(2) +"\nSeu gasto total e : R$ :" + custo.toFixed(2));
   console.log(
     `O seu eletrodomestico e : ` +eletro +`\nO consumo mensal em Kw/h e : ` +
