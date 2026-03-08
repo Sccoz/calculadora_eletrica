@@ -1,4 +1,5 @@
 # calculadora_eletrica
+
 Calculadora eletrica.
 
 Fazer um bom README é essencial para valorizar o seu portfólio no GitHub. Ele funciona como a "vitrine" do seu projeto, explicando o que ele faz e como usá-lo.Aqui está uma sugestão completa e bem estruturada para o seu código:
