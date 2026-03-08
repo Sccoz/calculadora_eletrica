@@ -8,7 +8,7 @@ while (quantidade > contador) {
   let quilo_whats = parseInt(prompt`(1) Se o consumo esta em watts (W)\n(2) Se o consumo esta em Quilo Watts (Kw)\nDigite:  `);
   let consumo = parseFloat(prompt("Digite o consumo do eletro domestico em (W ou KW) : "));
   let horas = parseFloat(prompt(`Digite mais ou menos quantas horas ele fica ligado por dia : `));
-  let dias = parseInt(prompt("Digite quantos dias em media ele fica ligado no mes : "));
+  let dias = parseInt(prompt("Digite quantos dias em media ele fica ligado no mes : "))
   switch (quilo_whats) {
     case 1:
       kilowats = consumo / 1000;

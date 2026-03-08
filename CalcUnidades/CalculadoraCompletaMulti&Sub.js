@@ -1,4 +1,4 @@
-const prefixo = "G" = 10**9 ; "M" = 10**6 ; "k"
+const prefixo = "G" = 10**9 ; "M" = 10**6 ; "k" ; ""
 
 
 
