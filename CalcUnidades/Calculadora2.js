@@ -1,4 +1,4 @@
-const prefixo = "G" = 10**9 ; "M" = 10**6 ; "k"
+const prefixo = "G" = 10**9 ; "M" = 10**6 ; "k" = 10**3
 
 
 let unidade = prompt(`Digite qual unidade voce deseja utilizar:
