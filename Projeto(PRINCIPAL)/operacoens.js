@@ -1,9 +1,18 @@
 //Funcao para calculo de consumo
-
+// prettier-ignore
 function CalcConsumo() {
-    let quantidade = parseInt(prompt("Digite quantos eletrodomesticos voce quer ver o preco: "));
+    let quantidade = parseInt(
+        prompt(`===============================
+    CALCULADORA DE CONSUMO ELÉTRICO
+    ===============================
+    
+    Quantos eletrodomésticos
+    você deseja calcular?
+    
+    Digite a quantidade:`));
     let contador = 0;
-    let taxa = parseFloat(prompt("Digite o valor da taxa por KWh R$ : "));
+    let taxa = parseFloat(prompt(`Digite o valor da tarifa de energia
+    (R$ por KWh):`));
     let kilowats = 0,
         custo = 0,
         kwhMES = 0;
@@ -11,7 +20,14 @@ function CalcConsumo() {
     while (quantidade > contador) {
         contador++;
         let eletro = prompt("Digite o nome do eletrodomestico : ");
-        let quilo_whats = parseInt(prompt`(1) Se o consumo esta em watts (W)\n(2) Se o consumo esta em Quilo Watts (Kw)\nDigite:  `);
+        let quilo_whats = parseInt(
+            prompt(`O consumo informado está em:
+
+        1 - Watts (W)
+        2 - Quilowatts (KW)
+        
+        Digite a opção:`)
+        );
         let consumo = parseFloat(prompt("Digite o consumo do eletro domestico em (W ou KW) : "));
         let horas = parseFloat(prompt(`Digite mais ou menos quantas horas ele fica ligado por dia : `));
         let dias = parseInt(prompt("Digite quantos dias em media ele fica ligado no mes : "));
@@ -26,8 +42,21 @@ function CalcConsumo() {
         kwhMES = kilowats * horas * dias;
         custo = kwhMES * taxa;
         gastoTotal += custo;
-        alert(`O seu eletrodomestico e : ` + eletro + `\nO consumo mensal em Kw/h e : ` + kwhMES.toFixed(2) + "\nSeu gasto total e : R$ :" + custo.toFixed(2));
-        console.log(`O seu eletrodomestico e : ` + eletro + `\nO consumo mensal em Kw/h e : ` + kwhMES.toFixed(2) + "\nSeu gasto total e : R$ :" + custo.toFixed(2));
+        alert(`===============================
+        RESULTADO DO CÁLCULO
+        ===============================
+        
+        Eletrodoméstico:` + eletro + 
+        "\nO consumo mensal em Kw/h e : " + kwhMES.toFixed(2) + 
+        "\nSeu gasto total e : R$ :" + custo.toFixed(2));
+
+        console.log(`===============================
+        RESULTADO DO CÁLCULO
+        ===============================
+        
+        Eletrodoméstico:` + eletro + 
+        "\nO consumo mensal em Kw/h e : " + kwhMES.toFixed(2) + 
+        "\nSeu gasto total e : R$ :" + custo.toFixed(2));
     }
     console.log(`O seu gasto total mensal e : ` + gastoTotal);
 }
@@ -43,32 +72,43 @@ function ConversorUnidade() {
         nano: 10 ** -9,
     };
 
-    let unidade = prompt(`Digite qual unidade voce deseja utilizar:
-    Corrente elétrica → A (Ampère)
-    Tensão elétrica → V (Volt)
-    Resistência elétrica → Ω (Ohm)
-    Potência elétrica → W (Watt)`);
+    let unidade = prompt(`===============================
+CONVERSOR DE UNIDADES
+===============================
 
-    let primeiroPrefixo = prompt(`Prefixo do VALOR DE ENTRADA
-        (G) para giga
-        (M) para Mega
-        (k) para Quilo
-        (base) Para um valor sem prefixo
-        (mili) Para Mili
-        (micro) Para Micro
-        (nano) Para nano
-        `);
-    let segundoPrefixo = prompt(`Prefixo para o QUAL DESEJA CONVERTER:
-        (G) para giga
-        (M) para Mega
-        (k) para Quilo
-        (base) Para um valor sem prefixo
-        (mili) Para Mili
-        (micro) Para Micro
-        (nano) Para nano
-        `);
+Digite a unidade:
 
-    let quantidade1 = parseFloat(prompt("Digite a quantidade que voce quer transformar : "));
+A → Corrente elétrica (Ampère)
+V → Tensão elétrica (Volt)
+Ω → Resistência elétrica (Ohm)
+W → Potência elétrica (Watt)
+
+Digite:`);
+
+    let primeiroPrefixo = prompt(`Prefixo do VALOR DE ENTRADA:
+
+    G → Giga
+    M → Mega
+    k → Quilo
+    base → Sem prefixo
+    mili → Mili
+    micro → Micro
+    nano → Nano
+    
+    Digite:`);
+    let segundoPrefixo = prompt(`Prefixo para CONVERSÃO:
+
+    G → Giga
+    M → Mega
+    k → Quilo
+    base → Sem prefixo
+    mili → Mili
+    micro → Micro
+    nano → Nano
+    
+    Digite:`);
+
+    let quantidade1 = parseFloat(prompt("Digite o valor que deseja converter : "));
 
     let valorNaBase = quantidade1 * prefixos[primeiroPrefixo];
     let resultadoFinal = valorNaBase / prefixos[segundoPrefixo];
@@ -80,8 +120,33 @@ function ConversorUnidade() {
         primeiroPrefixo = "";
     }
 
-    alert(quantidade1 + primeiroPrefixo + unidade + ` Equivalem a : ` + resultadoFinal + " " + segundoPrefixo + unidade);
-    console.log(quantidade1 + primeiroPrefixo + unidade + ` Equivalem a : ` + resultadoFinal + " " + segundoPrefixo + unidade);
+    alert(
+        `===============================
+    RESULTADO DA CONVERSÃO
+    ===============================\n` +
+            quantidade1 +
+            primeiroPrefixo +
+            unidade +
+            ` Equivalem a : ` +
+            resultadoFinal +
+            " " +
+            segundoPrefixo +
+            unidade
+    );
+
+    console.log(
+        `===============================
+    RESULTADO DA CONVERSÃO
+    ===============================` +
+            quantidade1 +
+            primeiroPrefixo +
+            unidade +
+            ` Equivalem a : ` +
+            resultadoFinal +
+            " " +
+            segundoPrefixo +
+            unidade
+    );
 }
 
 function CalcResistendia() {
@@ -117,24 +182,34 @@ function CalcResistendia() {
         PRATA: 0.01,
     };
 
-    console.log(`
-    (PRETO) para preto
-    (MARROM) para marrom
-    (VERMELHO) para vermelho
-    (LARANJA) para laranja
-    (AMARELO) para amarelo
-    (VERDE) para verde
-    (AZUL) para azul
-    (ROXO) para roxo
-    (CINZA) para cinza
-    (BRANCO) para branco
-    (DOURADO) para dourado
-    (PRATA) para prata`);
+    console.log(`===============================
+TABELA DE CORES DO RESISTOR
+===============================
+
+PRETO
+MARROM
+VERMELHO
+LARANJA
+AMARELO
+VERDE
+AZUL
+ROXO
+CINZA
+BRANCO
+DOURADO
+PRATA`);
 
     let qtdFaixas = parseInt(
-        prompt(`Digite a quantidade de faixas que o resistor possui :
-    (4) para resistores com 4 faixas
-    (5) para resistores com 5 faixas`)
+        prompt(`===============================
+        CALCULADORA DE RESISTOR
+        ===============================
+        
+        Quantas faixas possui?
+        
+        4 → Resistor de 4 faixas
+        5 → Resistor de 5 faixas
+        
+        Digite:`)
     );
 
     let faixaCompleta = 0,
@@ -163,6 +238,30 @@ function CalcResistendia() {
             ToleranciaMinima = faixaMultiplicada * (1 - tolerancia[faixa55] / 100);
             ToleranciaMaxima = faixaMultiplicada * (1 + tolerancia[faixa55] / 100);
     }
-    alert("O seu resistor varia de " + ToleranciaMinima.toFixed(2) + " a " + ToleranciaMaxima + " Ohm\nPorem seu numero fixo é :  " + faixaMultiplicada.toFixed(2) + " Ohm");
-    console.log("O seu resistor varia de " + ToleranciaMinima + " a " + ToleranciaMaxima.toFixed(2) + " Ohm\nPorem seu numero fixo é :  " + faixaMultiplicada.toFixed(2) + " Ohm");
+    alert(
+        `===============================
+    RESULTADO DO RESISTOR
+    ===============================
+    
+    Valor nominal:` +
+            faixaMultiplicada.toFixed(2) +
+            "\nVariação : " +
+            ToleranciaMinima.toFixed(2) +
+            " a  " +
+            ToleranciaMaxima.toFixed(2) +
+            " Ohm"
+    );
+    console.log(
+        `===============================
+    RESULTADO DO RESISTOR
+    ===============================
+    
+    Valor nominal:` +
+            faixaMultiplicada.toFixed(2) +
+            "\nVariação : " +
+            ToleranciaMinima.toFixed(2) +
+            " a  " +
+            ToleranciaMaxima.toFixed(2) +
+            " Ohm"
+    );
 }
