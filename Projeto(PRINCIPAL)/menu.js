@@ -8,12 +8,11 @@ let opcao = parseInt(
  1 - Consumo mensal de eletrodoméstico
  2 - Conversor de unidades
  3 - Calculadora da Lei de Ohm
- 
+ 4 - Lei de Ohm
  ===============================
  (APERTE F12 IMPORTANTE!!!)
- Digite a opção desejada:`
-     )
- );
+ Digite a opção desejada:`)
+);
 
 switch (opcao) {
     case 1:
@@ -24,5 +23,11 @@ switch (opcao) {
         break;
     case 3:
         CalcResistendia();
+        break;
+    case 4:
+        LeiOhm();
+        break;
+    default:
+        alert("Voce escolheu uma opcao invalida!!\nTente novamente.");
         break;
 }

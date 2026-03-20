@@ -1,5 +1,4 @@
 //Funcao para calculo de consumo
-// prettier-ignore
 function CalcConsumo() {
     let quantidade = parseInt(
         prompt(`===============================
@@ -73,17 +72,17 @@ function ConversorUnidade() {
     };
 
     let unidade = prompt(`===============================
-CONVERSOR DE UNIDADES
-===============================
+    CONVERSOR DE UNIDADES
+    ===============================
 
-Digite a unidade:
+    Digite a unidade:
 
-A → Corrente elétrica (Ampère)
-V → Tensão elétrica (Volt)
-Ω → Resistência elétrica (Ohm)
-W → Potência elétrica (Watt)
+    A → Corrente elétrica (Ampère)
+    V → Tensão elétrica (Volt)
+    Ω → Resistência elétrica (Ohm)
+    W → Potência elétrica (Watt)
 
-Digite:`);
+    Digite:`);
 
     let primeiroPrefixo = prompt(`Prefixo do VALOR DE ENTRADA:
 
@@ -137,7 +136,7 @@ Digite:`);
     console.log(
         `===============================
     RESULTADO DA CONVERSÃO
-    ===============================` +
+    ===============================\n` +
             quantidade1 +
             primeiroPrefixo +
             unidade +
@@ -183,21 +182,21 @@ function CalcResistendia() {
     };
 
     console.log(`===============================
-TABELA DE CORES DO RESISTOR
-===============================
+    TABELA DE CORES DO RESISTOR
+    ===============================
 
-PRETO
-MARROM
-VERMELHO
-LARANJA
-AMARELO
-VERDE
-AZUL
-ROXO
-CINZA
-BRANCO
-DOURADO
-PRATA`);
+    PRETO
+    MARROM
+    VERMELHO
+    LARANJA
+    AMARELO
+    VERDE
+    AZUL
+    ROXO
+    CINZA
+    BRANCO
+    DOURADO
+    PRATA`);
 
     let qtdFaixas = parseInt(
         prompt(`===============================
@@ -264,4 +263,10 @@ PRATA`);
             ToleranciaMaxima.toFixed(2) +
             " Ohm"
     );
+}
+
+// prettier-ignore-end
+
+function LeiOhm() {
+    let escolha = parseInt(prompt(`Digite o `));
 }
