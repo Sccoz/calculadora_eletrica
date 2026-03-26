@@ -234,7 +234,7 @@ function CalcResistendia() {
       let faixa2 = prompt(`Digite a cor da faixa 2 :`);
       let faixa3 = prompt(`Digite a cor da faixa 3 :`);
       let faixa4 = prompt(`Digite a cor da faixa 4 :`);
-      faixaCompleta = faixasNormal[faixa1] * 10 + faixasNormal[faixa2];
+      faixaCompleta = (faixasNormal[faixa1] * 10) + faixasNormal[faixa2];
       faixaMultiplicada = faixaCompleta * multiplicador[faixa3];
       ToleranciaMinima = faixaMultiplicada * (1 - tolerancia[faixa4] / 100);
       ToleranciaMaxima = faixaMultiplicada * (1 + tolerancia[faixa4] / 100);
@@ -245,7 +245,7 @@ function CalcResistendia() {
       let faixa33 = prompt(`Digite a cor da faixa 3 :`);
       let faixa44 = prompt(`Digite a cor da faixa 4 :`);
       let faixa55 = prompt(`Digite a cor da faixa 5 :`);
-      faixaCompleta = faixasNormal[faixa11] * 100 + faixasNormal[faixa22] * 10 + faixasNormal[faixa33];
+      faixaCompleta = (faixasNormal[faixa11] * 100) + (faixasNormal[faixa22] * 10) + faixasNormal[faixa33];
       faixaMultiplicada = faixaCompleta * multiplicador[faixa44];
       ToleranciaMinima = faixaMultiplicada * (1 - tolerancia[faixa55] / 100);
       ToleranciaMaxima = faixaMultiplicada * (1 + tolerancia[faixa55] / 100);
